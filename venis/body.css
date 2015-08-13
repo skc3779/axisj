@@ -1,0 +1,408 @@
+
+html {
+    overflow-y: auto;
+}
+
+select, textarea, input {
+    font-size: 9pt;
+    font-family: gulim, dotum, verdana, arial, helvetica, serif;
+    text-decoration: none;
+    color: #424242;
+    BORDER: 1px solid #BFBFBF;
+}
+
+body {
+    font-family: gulim, dotum, verdana, arial, helvetica, serif;
+    font-size: 12px;
+    font-weight: bold;
+    scrollbar-face-color: #D8D8D8;
+    scrollbar-shadow-color: #D8D8D8;
+    scrollbar-highlight-color: #FFFFFF;
+    scrollbar-3dlight-color: #C9C9C9;
+    scrollbar-darkshadow-color: #6C6C6C;
+    scrollbar-track-color: white;
+    scrollbar-arrow-color: #666666;
+    background-color: white;
+}
+
+caption, legend {
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+form {
+    margin: 0 0 0 0;
+}
+
+tr, td {
+    font-family: verdana, dotum, serif;
+    FONT-SIZE: 11px;
+    color: #262626;
+}
+
+input {
+    font-family: verdana, dotum, serif;
+    FONT-SIZE: 11px;
+    font-weight: normal;
+    color: #000000;
+    height: 17px;
+    border: 1px solid #d3d3d3;
+    vertical-align: middle;
+}
+
+textarea {
+    font-family: verdana, dotum, serif;
+    FONT-SIZE: 11px;
+    font-weight: normal;
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px solid #b7b7b7;
+    border-right-color: #d3d3d3;
+    border-bottom-color: #d3d3d3;
+}
+
+thead tr {
+    position: relative;
+    z-index: 20;
+}
+
+thead th {
+    position: relative;
+    cursor: default;
+    padding-top: 3px;
+}
+
+
+/* 컨텐츠 페이지 CSS 수정적용 Start */
+
+/* 검색조건 CSS Start */
+.search_title2 {
+    background-color: #F1F1F1;
+    border-bottom: 1px solid #E0E0E0;
+    font-size: 12px;
+    font-family: dotum, serif;
+    text-align: right;
+    padding: 3px 3px 0 3px;
+    color: #555555;
+    height: 29px;
+}
+
+.find_top_line  { width: 100%; margin-top:5px;    border: 1px solid #e0e0e0;    border-top: 2px solid #6f6f6f;}
+.find_title     { width:120px; background-color: #dde8e8;  border-bottom: 1px solid #c0d3d3;  font: bold 12px dotum;  padding: 3px 5px 3px 3px;  color: #555555;  height: 32px; }
+.find_title_l   { width:120px; background-color: #dde8e8;  border-bottom: 1px solid #c0d3d3;  font: bold 12px dotum;  padding: 3px 5px 3px 3px;  color: #555555;  height: 32px;  text-align: left; }
+.find_title_c   { width:120px; background-color: #dde8e8;  border-bottom: 1px solid #c0d3d3;  font: bold 12px dotum;  padding: 3px 5px 3px 3px;  color: #555555;  height: 32px;  text-align: center; }
+.find_title_r   { width:120px; background-color: #dde8e8;  border-bottom: 1px solid #c0d3d3;  font: bold 12px dotum;  padding: 3px 5px 3px 3px;  color: #555555;  height: 32px;  text-align: right; }
+.find_data    { position: relative; background-color: #ffffff;  border-bottom: 1px solid #c0d3d3;  border-left: 1px solid #f1f1f1;  font: normal 11px dotum;  text-align: left;  vertical-align: middle;  padding: 1px 3px 2px 3px; }
+.find_data_l  { position: relative; text-align: left; background-color: #ffffff;  border-bottom: 1px solid #c0d3d3;  border-left: 1px solid #f1f1f1;  font: normal 11px dotum;   vertical-align: middle;  padding: 1px 3px 2px 3px; }
+.find_data_r  { position: relative; background-color: #ffffff;  border-bottom: 1px solid #c0d3d3;  border-left: 1px solid #f1f1f1;  font: normal 11px dotum;  text-align: left;  vertical-align: middle;  padding: 1px 3px 2px 3px; }
+.find_data_c  { position: relative; background-color: #ffffff;  border-bottom: 1px solid #c0d3d3;  border-left: 1px solid #f1f1f1;  font: normal 11px dotum;  text-align: left;  vertical-align: middle;  padding: 1px 3px 2px 3px; }
+
+/* 검색조건 CSS End */
+
+/* 등록폼  CSS Start */
+.form_top_line  { width: 100%; margin-top:5px;    border: 1px solid #e0e0e0;    border-top: 2px solid #6f6f6f;}
+.form_title     { width:120px; background-color: #dde8e8;  border-bottom: 1px solid #c0d3d3;  font: bold 12px dotum;  padding: 3px 5px 3px 3px;  color: #555555;  height: 29px; }
+.form_title_l   { width:120px; background-color: #dde8e8;  border-bottom: 1px solid #c0d3d3;  font: bold 12px dotum;  padding: 3px 5px 3px 3px;  color: #555555;  height: 29px;  text-align: left; }
+.form_title_c   { width:120px; background-color: #dde8e8;  border-bottom: 1px solid #c0d3d3;  font: bold 12px dotum;  padding: 3px 5px 3px 3px;  color: #555555;  height: 29px;  text-align: center; }
+.form_title_r   { width:120px; background-color: #dde8e8;  border-bottom: 1px solid #c0d3d3;  font: bold 12px dotum;  padding: 3px 5px 3px 3px;  color: #555555;  height: 29px;  text-align: right; }
+.form_data    { position: relative;background-color: #ffffff;  border-bottom: 1px solid #c0d3d3;  border-left: 1px solid #f1f1f1;  font: normal 11px dotum;  text-align: left;  vertical-align: middle;  padding: 1px 3px 2px 3px; height: 30px;}
+.form_data_l  { position: relative;text-align: left; background-color: #ffffff;  border-bottom: 1px solid #c0d3d3;  border-left: 1px solid #f1f1f1;  font: normal 11px dotum;    vertical-align: middle;  padding: 1px 3px 2px 3px; height: 30px;}
+.form_data_r  { position: relative;text-align: right; background-color: #ffffff;  border-bottom: 1px solid #c0d3d3;  border-left: 1px solid #f1f1f1;  font: normal 11px dotum;   vertical-align: middle;  padding: 1px 3px 2px 3px; height: 30px;}
+.form_data_c  { position: relative;text-align: center; background-color: #ffffff;  border-bottom: 1px solid #c0d3d3;  border-left: 1px solid #f1f1f1;  font: normal 11px dotum;  vertical-align: middle;  padding: 1px 3px 2px 3px; height: 30px;}
+
+/* 등록폼  CSS End */
+
+/* 그리드 CSS Start */
+.grid_top_line  {}
+.grid_title   {}
+.grid_title_l   { text-align: left;}
+.grid_title_r   { text-align: right;}
+.grid_title_c   { text-align: center;}
+.grid_data    {position: relative;}
+.grid_data_l  {position: relative;text-align: left;}
+.grid_data_r  {position: relative;text-align: right;}
+.grid_data_c  {position: relative;text-align: center;}
+
+/*
+그리드 CSS를 위 스크립트로 대체함.
+.grid_top_line  { border-top: solid 2px #6f6f6f; border-right: solid 1px #e0e0e0; width: 100%; margin-top:5px; border-left:solid 1px #e0e0e0; border-bottom: solid 1px #e0e0e0;}
+.grid_title   { filter: progid:dximagetransform.microsoft.gradient(gradienttype=0, startcolorstr=#fffffd, endcolorstr=#fafafa);  border-left: solid 1px #e0e0e0;  border-bottom: solid 1px #515151;  word-break: break-all;  font-weight: normal;  color: #333333;  font: 12px dotum;  padding: 4px 2px 2px 2px;  height: 35px;  background-color:#ffffea; }
+.grid_title_l   { text-align: left; filter: progid:dximagetransform.microsoft.gradient(gradienttype=0,    startcolorstr=#fffffd, endcolorstr=#fafafa);  border-left: solid 1px #e0e0e0;  border-bottom: solid 1px #515151;  word-break: break-all;  font-weight: normal;  color: #333333;  font: 12px dotum;  padding: 4px 2px 2px 2px;  height: 35px; background-color:#ffffea;}
+.grid_title_r   { text-align: right; filter: progid:dximagetransform.microsoft.gradient(gradienttype=0,    startcolorstr=#fffffd, endcolorstr=#fafafa);  border-left: solid 1px #e0e0e0;  border-bottom: solid 1px #515151;  word-break: break-all;  font-weight: normal;  color: #333333;  font: 12px dotum;  padding: 4px 2px 2px 2px;  height: 35px; background-color:#ffffea;}
+.grid_title_c   { text-align: center;  filter: progid:dximagetransform.microsoft.gradient(gradienttype=0,    startcolorstr=#fffffd, endcolorstr=#fafafa);  border-left: solid 1px #e0e0e0;  border-bottom: solid 1px #515151;  word-break: break-all;  font-weight: normal;  color: #333333;  font: 12px dotum;  padding: 4px 2px 2px 2px;  height: 35px; background-color:#ffffea;}
+.grid_data    { position: relative;font-family: verdana, dotum, serif;  font-size: 11px;  color: #262626; padding: 3 3 0 3;  height: 20px;  mso-number-format: "\@";  border-left: solid 1 #ecebeb;  border-bottom: solid 1 #ecebeb; height: 29px;}
+.grid_data_l  { position: relative;text-align: left; vfont-family: verdana, dotum, serif;  font-size: 11px;  color: #262626; padding: 3 3 0 3;  height: 20px;  mso-number-format: "\@";  border-left: solid 1 #ecebeb;  border-bottom: solid 1 #ecebeb; }
+.grid_data_r  { position: relative;text-align: right; font-family: verdana, dotum, serif;  font-size: 11px;  color: #262626; padding: 3 3 0 3;  height: 20px;  mso-number-format: "\@";  border-left: solid 1 #ecebeb;  border-bottom: solid 1 #ecebeb; }
+.grid_data_c  { position: relative;text-align: center; font-family: verdana, dotum, serif;  font-size: 11px;  color: #262626; padding: 3 3 0 3;  height: 20px;  mso-number-format: "\@";  border-left: solid 1 #ecebeb;  border-bottom: solid 1 #ecebeb; }
+
+tr[class^="grid_alternate"]:nth-child(odd) {  background: #f6f6f6;}
+tr[class^="grid_alternate"]:nth-child(odd)  td input[class^="noinputtext"] {  background: #f6f6f6;}
+tr[id^="grid_alternate"]:nth-child(odd) {  background: #f6f6f6;}
+tr[id^="grid_alternate"]:nth-child(odd)  td input[class^="noinputtext"] {  background: #f6f6f6;}
+tr[class^="grid_alternate"]:hover {  background: #c4fdff !important;}
+tr[class^="grid_alternate"]:hover       td input {  background: #c4fdff !important;}
+tr[id^="grid_alternate"]:hover {  background: #c4fdff !important;}
+tr[id^="grid_alternate"]:hover       td input {  background: #c4fdff !important;}
+*/
+
+/* 그리드 CSS End */
+
+/* 컨텐츠 페이지 CSS 수정적용 End */
+
+
+/* Pager list */
+.page {
+    font-family: Dotum, serif;
+    color: #848484;
+    font-size: 10pt;
+}
+
+a.page:link {
+    font-family: dotum, serif;
+    color: #6F6FFF;
+    font-size: 10pt;
+    font-weight: normal;
+    text-decoration: none;
+    letter-spacing: 0;
+}
+
+a.page:visited {
+    font-family: dotum, serif;
+    color: #6F6FFF;
+    font-size: 10pt;
+    font-weight: normal;
+    text-decoration: none;
+    letter-spacing: 0;
+}
+
+a.page:hover {
+    font-family: dotum, serif;
+    color: #F37801;
+    font-size: 10pt;
+    font-weight: normal;
+    text-decoration: none;
+    letter-spacing: 0;
+}
+
+a.page:active {
+    font-family: dotum, serif;
+    color: #F37801;
+    font-size: 10pt;
+    font-weight: normal;
+    text-decoration: none;
+    letter-spacing: 0;
+}
+
+.list_page {
+    margin-top:5px;
+    height: 20px;
+    background-color: #FFFFFF;
+    font-family: dotum, serif;
+    font-size: 9pt;
+    font-weight: bold;
+    color: #848484;
+}
+
+/* Pager list end */
+
+
+
+/* file upload component */
+.upload_data_l {
+    text-align: left;
+    border-spacing: 0;
+    border-left: 1px solid #ecebeb;
+    border-bottom: 1px solid #ecebeb;
+    padding: 4px 3px 1px 3px;
+}
+
+.upload_data_c {
+    text-align: center;
+    border-spacing: 0;
+    border-left: 1px solid #ecebeb;
+    border-bottom: 1px solid #ecebeb;
+    padding: 4px 3px 1px 3px;
+}
+
+.upload_data_r {
+    text-align: right;
+    border-spacing: 0;
+    border-left: 1px solid #ecebeb;
+    border-bottom: 1px solid #ecebeb;
+    padding: 4px 3px 1px 3px;
+}
+. upload_head {
+    background-color: #F1F1F1;
+    border-bottom: 1px solid #E0E0E0;
+    font: bold 12px dotum;
+    padding: 3px 3px 0 3px;
+    color: #555555;
+    height: 29px;
+    text-align: center;
+}
+
+.main_sub_title {
+    color: #004774;
+    font-size: 13px;
+    font-weight: bold;
+    padding-left: 15px;
+    vertical-align: middle;
+    padding-top: 4px;
+}
+
+/* Progress bar */
+.loadingWrap img {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 42%;
+    top: 35%;
+}
+
+/** jquery tab UI Setting. */
+
+.ui-widget-header {
+    background: white none;
+    border-width: 0;
+}
+
+.ui-widget-header ul {
+    border-width: 0;
+    background: white none;
+}
+
+.ui-tabs .ui-tabs-nav li {
+    font-weight:bold;
+    height: 20px;
+    padding-top: 6px;
+    border-width: 1px;
+}
+
+.ui-tabs .ui-tabs-nav li a {
+    position: relative;
+    top: -6px;
+    border-width: 0;
+    color: black;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+/* .ui-state-active {
+    border: 1px solid #dddddd;
+    background-color: #DDE8E8;
+    font-weight: bold;
+    color: #ff0084;
+}
+
+.ui-state-default {
+    border: 1px solid #dddddd;
+    background: #A63A3A url("images/ui-bg_highlight-soft_100_f6f6f6_1x100.png") 50% 50% repeat-x;
+    font-weight: bold;
+    color: #0073ea;
+}
+*/
+
+/* tab component css */
+.tab {
+    background-color: #4A83A0;
+    border-top: white 10px solid;
+    border-down: white 10px solid;
+}
+
+
+/*** 테두리 없음 ***/
+.no_border_l {
+    text-align: left;
+    border: none;
+    background-color: #ffffff;
+}
+.no_border_r {
+    text-align: right;
+    border: none;
+    background-color: #ffffff;
+}
+.no_border_c {
+    text-align: center;
+    border: none;
+    background-color: #ffffff;
+}
+.no_border {
+    border: none;
+    background-color: #ffffff;
+}
+
+
+
+/* ========================= 아래 CSS는 삭제 예정임 ======================================= */
+
+
+/* ------------- Search ------------- */
+.search_table01 {
+    border-top: 2px solid #515151;
+    border-right: 1px solid #E0E0E0;
+    background-color: #ffffff;
+}
+
+.search_title {
+    background-color: #F1F1F1;
+    border-bottom: 1px solid #E0E0E0;
+    font: bold 12px dotum;
+    text-align: right;
+    padding: 3px 3px 0 3px;
+    color: #555555;
+    height: 29px;
+}
+
+.search_data {
+    background-color: #ffffff;
+    border-bottom: 1px solid #f1f1f1;
+    border-left: 1px solid #f1f1f1;
+    font: normal 11px dotum;
+    text-align: left;
+    vertical-align: middle;
+    padding: 1px 3px 2px 3px;
+}
+
+.search_button {
+    border-bottom: 1px solid #f1f1f1;
+    background-color: #ffffff;
+    text-align: right;
+    padding: 0 15px 0 0;
+}
+
+/* KHH text-align */
+.search_title_l {
+    background-color: #F1F1F1;
+    border-bottom: 1px solid #E0E0E0;
+    font: normal 12px dotum;
+    padding: 3px 3px 0 3px;
+    color: #555555;
+    height: 29px;
+    text-align: left
+}
+
+.search_title_c {
+    background-color: #F1F1F1;
+    border-bottom: 1px solid #E0E0E0;
+    font: normal 12px dotum;
+    padding: 3px 3px 0 3px;
+    color: #555555;
+    height: 29px;
+    text-align: center;
+}
+
+.search_title_r {
+    background-color: #F1F1F1;
+    border-bottom: 1px solid #E0E0E0;
+    font: normal 12px dotum;
+    padding: 3px 3px 0 3px;
+    color: #555555;
+    height: 29px;
+    text-align: right;
+}
+
+
