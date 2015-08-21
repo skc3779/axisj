@@ -1,0 +1,75 @@
+/*-----------------------------------*/
+/* 태그 기본 설정                      */
+/*-----------------------------------*/
+body, ul {
+	margin: 0;
+	padding: 0;
+}
+ul { list-style: none; }
+a { text-decoration: none; }
+
+/*-----------------------------------*/
+/* 드롭다운 메뉴                       */
+/*-----------------------------------*/
+/* 1레벨 메뉴 */
+/* 1레벨 메뉴의 가로 출력/배경색/크기 지정 */
+.dropdownmenu > li {
+    float: left;
+    position: relative;
+    background: #67b0d1;
+    width: 25%;
+}
+/* 1레벨 메뉴의 텍스트 속성/크기 지정 */
+.dropdownmenu > li > a {
+    display: block;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+}
+/* 1레벨 메뉴에 마우스를 올렸을 때의 배경색 지정 */
+.dropdownmenu > li:hover {
+    background: #7bbbd7;
+}
+/* 1레벨 메뉴에 마우스를 올렸을 때 하위 메뉴의 위치 지정 */
+.dropdownmenu > li:hover > ul {
+    top: 60px;
+    left: 0;
+}
+    
+/* 2레벨 메뉴 부터의 속성 */
+/* 2레벨 메뉴의 기본 위치/크기/테두리 지정
+현재의 위치에서 위로 “-9999” 픽셀로 하여 화면에서 보이지 않도록 설정 */
+.dropdownmenu ul {
+    position: absolute;
+    top: -9999px;
+    z-index: 9999;
+    width: 140px;
+    border: 1px solid #cccccc;
+}
+/* 2레벨 메뉴의 위치 속성 지정 */
+.dropdownmenu ul li {
+    position: relative;
+}
+/* 2레벨 메뉴의 텍스트 속성/배경색/여백 지정 */
+.dropdownmenu ul a {
+    display: block;
+    color: #aaaaaa;
+    font-size: 12px;
+    line-height: 40px;
+    background: #ffffff;
+    padding-left: 20px;
+}
+/* 2레벨 메뉴에 마우스를 올렸을 때의 배경색 지정 */
+.dropdownmenu ul a:hover {
+    color: #ffffff;
+    background: #67b0d1;
+}    
+ 
+/* 2레벨 메뉴에 마우스를 올렸을 때의 하위 메뉴의 위치 지정 */
+.dropdownmenu ul li:hover > ul {
+    position: absolute;
+    top: 0;
+    left: 100%;
+} 

@@ -1,0 +1,36 @@
+.video-container {
+	height: auto;
+	width: auto;
+	display: block;
+	overflow: hidden;
+	z-index: -10000;
+	background: #ddd;
+}
+
+.book-page-header {
+	height: 200px;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+	background-image: url(../images/bg-blue.jpg);
+	opacity: 0.7;
+	margin-bottom: -40px;
+	padding-top: 20px;
+	color: #fff;
+}
+
+.book-page-header small {
+	color: #fff;
+}
+
+.book-page-header-movie {
+	background-color: yellow;
+}
+
+.book-page-header-about {
+	background-color: green;
+}
+
+.book-page-header-contact {
+	background-color: red;
+}

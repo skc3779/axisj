@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../media/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="../resources/case.css">
+    <script type="text/javascript" language="javascript" src="../../media/js/jquery.js"></script>
+    <script type="text/javascript" language="javascript" src="../../media/js/jquery.dataTables.js"></script>
+    <style type="text/css" class="init">
+        th, td {
+            white-space: nowrap;
+        }
+
+        div.dataTables_wrapper {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        div.dataTables_filter {
+            margin-bottom: 5px;
+        }
+
+        div.dataTables_filter label {
+            vertical-align: middle;
+        }
+
+        div.dataTables_scrollHead {
+
+            border: 1px solid #e0e0e0 !important;
+            border-top: 2px solid #6f6f6f !important;
+            background-color: #ffffea;
+        }
+
+        div.dataTables_scrollHeadInner {
+
+        }
+
+    </style>
+    <script>
+        $.ajax({
+            type: "POST",
+            dataType:"json",
+            async: true,
+            contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+            url: "/venis/crm/testcar/testcar/doTestCarSearch.do",
+            data: $("#frm").serialize(),
+            success:function(data) {
+                var row = 0;
+                var grid = $("#listTable").DataTable();
+                grid.rows().remove().draw();
+
+                for (var y=0; y < data.paginateListSize; y++) {
+                    row = y+1;
+
+                    var selectMaker = "";
+                    var selected = "";
+
+                    selectMaker = "<select name='arrMngStatus' id='arrMngStatus"+y+"' onchange='javascript:modifyChk("+y+"),'>  ";
+                    for (var j=0; j < data.statListSize; j++) {
+                        if (data.statList[j].code == data.paginateList[y].mngStatus) {
+                            selected = " selected";
+                        } else {
+                            selected = "";
+                        }
+                        selectMaker +=  "<option value='"+data.statList[j].code+"' "+selected+">"+data.statList[j].codeNm+"</option>";
+                    }
+                    selectMaker +=  "</select><input type='hidden' name='arrTestcarNo' id='arrTestcarNo"+y+"' value='"+data.paginateList[y].testcarNo+"'/><input type='hidden' name='arrChkValue' id='arrChkValue"+y+"'/>";
+
+                    grid.row.add([
+                        row,
+                        "<input type='checkbox' id='chk"+y+"' name='chk' class='chk_no_border'>",
+                        "<input type='text' name='arrMngcarNo' id='arrMngcarNo"+y+"' value='"+data.paginateList[y].mngcarNo+"' size='8' onchange='javascript:modifyChk("+y+"),'>",
+                        data.paginateList[y].contractDt+"",
+                        data.paginateList[y].vin+"",
+                        data.paginateList[y].variant2+"",
+                        data.paginateList[y].lastKm+"",
+                        "<input type='text' name='arrVehicNo1' id='arrVehicNo1"+y+"' value='"+data.paginateList[y].vehicNo1+"' size='6' onchange='javascript:modifyChk("+y+"),'>&nbsp,<input type='text' name='arrVehicNo2' id='arrVehicNo2' value='"+data.paginateList[y].vehicNo2+"' size='5' onchange='javascript:modifyChk("+y+"),'>",
+                        selectMaker]).draw();
+
+                }
+                commonObj.innerInputBind("listTable");
+                commonObj.innerSelectBind("listTable");
+                fn_make_page("pagelist", data.totalSize, data.pageSize, "insertTable", data.page) ;
+            },
+            error:function(request, status) {
+                alert("시승차량 조회중 오류가 발생하였습니다.");
+                return false;
+            }
+        });
+    </script>
+</head>
+<body>
+<h3>https://datatables.net/examples</h3>
+
+
+<input type="text" id="gridHeight" value="400px">
+<button onclick="setHeight()">높이변경</button>
+<input type="text" id="gridWidth" value="500px">
+<button onclick="setWidth()">가로변경</button>
+<button onclick="setCreate()">재성성</button>
+
+
+
+</body>
+</html>

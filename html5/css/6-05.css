@@ -1,0 +1,41 @@
+/*-----------------------------------*/
+/* 태그 기본 설정                      */
+/*-----------------------------------*/   
+* {
+    margin: 0;
+    padding: 0;
+}    
+li { list-style: none; }
+img { display: block; }
+
+/*-----------------------------------*/
+/* 이미지 슬라이더                     */
+/*-----------------------------------*/
+/* 이미지 슬라이더 콘테이너 속성 */    
+.slider_container {
+    position: relative;
+    float: left;
+}
+
+/* 네비게이션 버튼 속성 */
+/* 네비게이션 버튼 위치/배경이미지/크기/투명도 지정 */    
+.slider_nav {
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: #000 url("../images/6-05-00.gif") no-repeat left 50%;
+    width: 40px;
+    opacity: 0.5;
+}
+/* 네비게이션 버튼 클릭시 투명도 지정 */
+.slider_nav:active {
+    opacity: 1.0;
+}
+/* 네비게이션 오른쪽 버튼 위치/배경이미지 지정 */
+.slider_nav.next {
+    left: auto;
+    right: 0;
+    background-position: right 50%;
+}

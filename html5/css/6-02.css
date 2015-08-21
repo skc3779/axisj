@@ -1,0 +1,39 @@
+/*-----------------------------------*/
+/* 태그 기본 설정                      */
+/*-----------------------------------*/
+body, ul {
+	margin: 0;
+	padding: 0;
+}
+a { 
+    color: #666;
+    text-decoration: none;
+}
+
+/*-----------------------------------*/
+/*  아코디언 메뉴                      */
+/*-----------------------------------*/
+/* li에 포함된 a태그에 block 속성을 지정해 한줄 전체를 차지하도록 만듬 */
+.accordion ul li a {
+    display: block;
+}
+    
+/* 1레벨 메뉴의 텍스트 색상/여백/테두리/배경색 지정 */
+.accordion > ul > li > a {
+    color: #ffffff;
+    padding: 20px 44px;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #677381;
+}
+
+/* 1레벨 메뉴의 하위 메뉴가 펼쳐졌을 때의 배경색 지정 */
+.accordion > ul > li.open > a {
+    background-color: #eb6b60;
+}
+   
+/* 2레벨 메뉴의 여백/테두리/배경색 지정 */
+.accordion ul ul li a {
+    padding: 14px 44px;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #ffffff;
+}

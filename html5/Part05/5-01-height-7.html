@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>UIO</title>
+    <style type="text/css">
+        /*
+            Joontop UIO 01 (상하좌우 가변대응 레이아웃)
+            남아있는 문제점
+            1. IE6에서 min-width, min-height 불가
+            2. IE7에서 전체스크롤 불가 (다음지도에는 전체적으로 없음, 불필요한 기능이라 생각됨)
+            3. ...
+        */
+        /*
+            header,footer의 높이를 padding에 삽입
+            IE에선 overflow:hidden 이 필요함 (제거하면 전체스크롤 기능)
+        */
+        html{*overflow:hidden;height:100%;*padding:51px 0 51px}
+
+        /*
+            header,footer의 높이를 margin에 빼기
+            overflow:hidden은 IE7에서 드래그 에러현상때문
+        */
+        body{*overflow:hidden;height:100%;margin:0;*margin:-51px 0 -51px}
+        /*
+            IE7에서 min-height값은 header,footer높이를 뺀값 대입
+            position:relative는 IE외 브라우져에 min값을 넣을수 있도록 하기위함
+        */
+        #jtWrap{position:relative;height:100%;min-width:900px;min-height:500px;*min-height:398px}
+        #jtHeader{position:absolute;*position:static;top:0;width:100%;height:50px;border-bottom:1px solid #000}
+        /*
+            header,footer의 높이를 top,bottom 에 삽입
+            height:auto 는 IE외 브라우져에선 절대위치로 크기를 잡아야해서
+        */
+        #jtContainer{position:absolute;*position:static;top:51px;bottom:51px;width:100%;height:auto;*height:100%}
+        #jtFooter{position:absolute;*position:static;bottom:0;width:100%;height:50px;border-top:1px solid #000}
+        #jtNav{overflow:hidden;overflow-y:auto;position:relative;float:left;width:200px;height:100%;_margin-right:-3px;border-right:1px solid #000}
+        /*
+            세로 스크롤 필요할시 overflow-y:auto 추가
+        */
+        #jtContent{overflow:hidden;overflow-y:auto;position:relative;height:100%;zoom:1}
+
+        /*
+            ADD
+            레이아웃과 관련없는 CSS
+        */
+        #jtContentHeader{overflow:hidden;position:absolute;left:0;top:0;z-index:30;width:100%;height:30px;border-bottom:1px solid #000;background-color:#f1f1f1}
+        #jtContentHeader .bt_nav_close,
+        #jtContentHeader .bt_nav_open{display:inline-block;width:20px;height:30px;border-right:1px solid #000;background-color:#ccc;color:#000;font-family:tahoma;font-size:21px;font-weight:bold;text-decoration:none;text-align:center;vertical-align:top}
+        #jtContentHeader .bt_nav_open{display:none}
+        .nav_close #jtContentHeader .bt_nav_close{display:none}
+        .nav_close #jtContentHeader .bt_nav_open{display:inline-block}
+        .nav_close #jtNav{display:none}
+        #jtMap{position:relative;width:100%;height:100%;background:url(http://www.webpeace.net/joontop/img/sae1.jpg) repeat 0 0;}
+        #jtContentFooter{overflow:hidden;position:absolute;left:0;bottom:0;_position:relative;z-index:30;_clear:both;_margin-top:-81px;width:100%;height:80px;border-top:1px solid #000;background-color:#f1f1f1}
+    </style>
+</head>
+<body>
+
+<div id="jtWrap">
+    <div id="jtHeader">Joontop Header / Joontop Header / Joontop Header / Joontop Header / Joontop Header / Joontop Header</div>
+    <div id="jtContainer">
+        <div id="jtNav">
+            Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav
+        </div>
+        <div id="jtContent">
+            <div id="jtContentHeader">
+                <a href="#" title="닫기" class="bt_nav_close" onclick="document.getElementById('jtWrap').className = 'nav_close';return false;">&lt;</a>
+                <a href="#" title="열기" class="bt_nav_open" onclick="document.getElementById('jtWrap').className = '';return false;">&gt;</a>
+                Joontop Content Header / Joontop Content Header / Joontop Content Header / Joontop Content Header / Joontop Content Header / Joontop Content Header
+            </div>
+            <div id="jtMap">
+                Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav<br>Nav
+            </div>
+            <div id="jtContentFooter">
+                Joontop Content Footer / Joontop Content Footer / Joontop Content Footer / Joontop Content Footer / Joontop Content Footer / Joontop Content Footer / Joontop Content Footer
+            </div>
+        </div>
+    </div>
+    <div id="jtFooter">Joontop Footer / Joontop Footer / Joontop Footer / Joontop Footer / Joontop Footer / Joontop Footer</div>
+</div>
+
+</body>
+</html>

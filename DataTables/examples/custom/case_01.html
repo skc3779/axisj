@@ -40,10 +40,10 @@
     <script>
         $(function () {
             $('#example1').dataTable({
-                //"autoWidth": false,
+                "autoWidth": true,
                 "destroy": true,
                 "scrollX": true,
-                "scrollY": "300px",
+                "scrollY": "200px",
                 "scrollCollapse": true,
                 "paging": false,
                 "info": false,
@@ -55,10 +55,10 @@
             });
 
             $('#example2').dataTable({
-                //"autoWidth": false,
+                "autoWidth": false,
                 "destroy": true,
                 "scrollX": true,
-                "scrollY": "300px",
+                "scrollY": "200px",
                 "scrollCollapse": true,
                 "paging": false,
                 "info": false,
@@ -105,10 +105,9 @@
     <input type="text" id="gridWidth" value="500px">
     <button onclick="setWidth()">가로변경</button>
 
-    <table style="border: solid 1px red;table-layout: inherit;">
+    <table style="border: solid 1px red;" width="100%">
         <tr>
             <td>
-                <div style="width: 100%;border: solid 1px blue;">
                 <table id="example1" class="display" cellspacing="0" width="100%">
                     <thead>
                     <tr>
@@ -753,13 +752,15 @@
                     </tr>
                     </tbody>
                 </table>
-                </div>
+
 
             </td>
         </tr>
         <tr>
             <td>
-                <div style="width:100%">
+
+
+
                 <table id="example2" class="display" cellspacing="0" width="100%">
                     <thead>
                     <tr>
@@ -1404,7 +1405,9 @@
                     </tr>
                     </tbody>
                 </table>
-                </div>
+
+
+
             </td>
         </tr>
     </table>

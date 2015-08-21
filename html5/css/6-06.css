@@ -1,0 +1,70 @@
+/*-----------------------------------*/
+/* 태그 기본 설정                      */
+/*-----------------------------------*/
+a { text-decoration: none; }
+span { 
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+}
+/*-----------------------------------*/
+/* 아이콘 버튼                         */
+/*-----------------------------------*/
+/* video_control의 info 영역 속성 지정 */
+.info {
+    display: inline-block;
+    text-align: center;
+    padding: 4px;
+}
+
+.info_play {
+    width: 30%;
+    background-color: #67b0d1;
+}
+
+.info_speed {
+    width: 25%;
+    background-color: #ebc85e;
+}
+
+.info_volumn {
+    width: 40%;
+    background-color: #60cd9b;
+}
+
+/* info 영역의 버튼을 inline-block 속성을 지정해 한줄에 표시되지만 block 처럼 공간을 차지하도록 만듬 */
+.btn {
+    display: inline-block;
+}
+
+/* 버튼의 크기/텍스트 속성/여백/테두리 지정 */
+.btn span
+{
+    display: block;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-weight: bold;
+    padding: 0 10px;
+    border-radius: 4px;
+    border: 1px solid #fff;
+}
+
+/* play 버튼의 배경색 지정 */
+.btn_play span
+{
+    background-color: #67b0d1;
+}
+
+/* pause 버튼의 배경색 지정 */
+.btn_pause span
+{
+    background-color: #e87352;
+}
+
+/* up down 버튼의 크기 지정 */
+.btn_speedUp span, .btn_speedDown span, .btn_volumeDown span, .btn_volumeUp span {
+    width: 20px;
+}
